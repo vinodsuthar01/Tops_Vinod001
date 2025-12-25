@@ -1,0 +1,30 @@
+Functions in Python
+
+1. Defining Functions
+
+    A function is a block of reusable code that performs a specific task.
+    Functions are defined using the def keyword.
+    Functions help reduce code repetition and improve readability.
+
+2. Types of Functions
+
+    Without parameters & without return value:
+        Performs a task but does not take input or give output.
+
+    With parameters & without return value:
+        Takes input values but only performs an action.
+
+    Without parameters & with return value:
+        Returns a result without taking input.
+
+    With parameters & with return value:
+        Takes input and returns a result.
+
+3. Anonymous (Lambda) Functions
+
+    Lambda functions are small, unnamed functions.
+    Defined using the lambda keyword.
+    Usually written in a single line.
+    Used for short, simple operations.
+
+Functions make programs modular, reusable, and easy to maintain.

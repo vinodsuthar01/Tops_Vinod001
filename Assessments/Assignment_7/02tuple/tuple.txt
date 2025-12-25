@@ -1,0 +1,34 @@
+1. Introduction to Tuples & Immutability
+
+    A tuple is an ordered collection of elements.
+    Tuples are immutable, meaning their values cannot be changed after creation.
+    They are written using parentheses ().
+
+2. Creating and Accessing Elements
+
+    Tuples can store different data types.
+    Elements are accessed using indexing (positive and negative), similar to lists.
+    Indexing starts from 0.
+
+3. Basic Operations with Tuples
+
+    Concatenation (+): Combines two or more tuples into one.
+    Repetition (*): Repeats the tuple elements multiple times.
+    Membership (in, not in): Checks whether an element exists in a tuple.
+
+Tuples are useful when data should not be modified and needs to remain constant.
+
+
+4. Positive and Negative Indexing
+
+    Tuple elements are accessed using an index.
+    Positive indexing starts from 0 (left to right).
+    Negative indexing starts from -1 (right to left).
+    Indexing works the same as in lists.
+
+5. Slicing a Tuple
+
+    Slicing is used to access a range of elements from a tuple.
+    Format: tuple[start : end]
+    The start index is included, the end index is excluded.
+    Slicing does not change the original tuple (tuples are immutable).

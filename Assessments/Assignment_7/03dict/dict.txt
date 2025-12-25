@@ -1,0 +1,48 @@
+Dictionaries
+
+1. Introduction to Dictionaries (Key–Value Pairs)
+
+    A dictionary stores data in key–value pairs.
+    Each key is unique and used to access its value.
+    Dictionaries are written using curly braces {}.
+
+2. Accessing, Adding, Updating, and Deleting Elements
+
+    Accessing: Values are accessed using their keys.
+    Adding: A new key–value pair can be added by assigning a value to a new key.
+    Updating: Existing values can be changed using their keys.
+    Deleting: Elements can be removed using keywords or methods.
+    Dictionaries are mutable, so changes are allowed.
+
+3. Common Dictionary Methods
+
+    keys(): Returns all the keys in the dictionary.
+    values(): Returns all the values in the dictionary.
+    items(): Returns all key–value pairs as tuples.
+
+Dictionaries are useful for storing and managing data with meaningful labels (keys).
+
+
+Dictionary Operations
+
+1. Iterating Over a Dictionary
+
+    You can loop through a dictionary to access keys, values, or key–value pairs.
+    Commonly done using for loops.
+    Iteration helps in processing or displaying dictionary data.
+
+2. Merging Two Lists into a Dictionary
+
+    Two lists (one for keys, one for values) can be combined into a dictionary.
+    This can be done using:
+    Loops: manually assign each key with its value.
+    zip(): pairs elements from both lists and converts them into key–value pairs.
+    Useful when data is stored separately.
+
+3. Counting Character Occurrences in a String
+
+    A dictionary can be used to count how many times each character appears.
+    Characters act as keys, and their counts act as values.
+    This is a common use case for dictionaries in text processing.
+
+Dictionaries make counting, mapping, and data organization simple and efficient.

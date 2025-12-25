@@ -1,0 +1,84 @@
+*Understanding how to create and access elements in a list.
+Ans
+    A list is created using square brackets [].
+
+    Example:
+
+    numbers = [10, 20, 30, 40]
+
+*Indexing in lists (positive and negative indexing).
+Ans
+    In Python, indexing is used to access elements of a list by their position. List indexing starts from 0.
+
+*Slicing a list: accessing a range of elements.
+Ans
+    In Python, slicing is used to get multiple elements from a list at once.
+
+* Common list operations: concatenation, repetition, membership.
+Ans
+    Concatenation (+)
+    Used to join two or more lists into one list.
+
+    Repetition (*)
+    Used to repeat elements of a list multiple times.
+
+    Membership (in / not in)
+    Used to check whether an element exists in a list.
+
+    Combined Example
+    a = [1, 2]
+    b = [3, 4]
+
+    c = a + b        # concatenation
+    d = a * 2        # repetition
+
+    print(c)         # [1, 2, 3, 4]
+    print(d)         # [1, 2, 1, 2]
+
+    print(3 in c)    # True
+    print(5 in c)    # False
+
+* Understanding list methods like append(), insert(), remove(), pop().
+Ans
+    Understanding Common List Methods :
+
+    (append(), insert(), remove(), pop())
+        These methods are used to modify a list.
+    
+    append()
+        Adds one element at the end of the list.
+        Syntax:
+            list.append(value)
+    insert()
+        Adds an element at a specific index.
+        Syntax:
+            list.insert(index, value)
+    remove()
+        Removes the first occurrence of a specified value.
+        Syntax:
+            list.remove(value)
+    pop()
+        Removes and returns an element.
+        Syntax:
+            list.pop()        # removes last element
+            list.pop(index)   # removes element at index
+
+
+Iterating over a List using Loops
+
+    Iterating means accessing each element one by one.
+    for loop is commonly used
+    Can iterate by value or by index
+
+2️⃣ Sorting and Reversing a List
+
+    sort() → Sorts the list in place (original list changes)
+    sorted() → Returns a new sorted list (original unchanged)
+    reverse() → Reverses the list order in place
+
+3️⃣ Basic List Manipulations
+
+    Addition → Adding new elements using methods like append or insert
+    Deletion → Removing elements using remove, pop, or del
+    Updating → Changing an element using its index
+    Slicing → Accessing a range of elements using start and end indexes

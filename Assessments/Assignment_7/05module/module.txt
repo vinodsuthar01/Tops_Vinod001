@@ -1,0 +1,21 @@
+Python Modules
+
+1. Introduction to Modules & Importing
+
+    A module is a file that contains Python code (functions, variables, classes).
+    Modules help organize code and promote reuse.
+    Modules are imported using the import keyword or from … import.
+
+2. Standard Library Modules
+
+    math: Provides mathematical functions like square root, power, trigonometry, etc.
+    random: Used to generate random numbers, choices, or shuffling data.
+    These modules are built-in, so no installation is required.
+
+3. Creating Custom Modules
+
+    A custom module is created by saving Python code in a .py file.
+    Functions or variables defined in this file can be imported into another program.
+    Custom modules help manage large programs by splitting code into smaller files.
+
+Modules make Python programs clean, organized, and reusable.
