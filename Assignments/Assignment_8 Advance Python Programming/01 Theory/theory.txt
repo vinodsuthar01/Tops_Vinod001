@@ -1,0 +1,126 @@
+1. Printing on Screen
+    🔹 What is print() function?
+        print() is used to display output on the screen.
+
+    🔹 What are f-strings?
+        f-strings allow variables to be inserted directly inside strings using {}.
+
+    🔹 What is format()?
+        format() is used to format strings by replacing placeholders with values.
+
+2. Reading Data from Keyboard
+    🔹 What is input()?
+        input() is used to read data from the keyboard as a string.
+
+    🔹 How to convert input data types?
+        User input can be converted using int(), float(), etc.
+
+    🔹 Why type conversion is needed?
+        Because input() always returns string data.
+
+3. Opening and Closing Files
+    🔹 What is file handling?
+        File handling is used to read and write data to files.
+
+    🔹 What are file modes?
+        r → read
+        w → write
+        a → append
+        r+ → read & write
+        w+ → write & read
+
+    🔹 Why close() is used?
+        To release system resources after file operations.
+
+4. Reading and Writing Files
+    🔹 Difference between read(), readline(), readlines()?
+        read() → reads full file
+        readline() → reads one line
+        readlines() → reads all lines as list
+
+    🔹 What is write()?
+        Used to write a string into a file.
+
+    🔹 What is writelines()?
+        Used to write multiple strings into a file. 
+
+    🔹 What is tell()?
+        tell() returns the current position of the file cursor.
+
+5. Exception Handling
+    🔹 What is an exception?
+        An exception is a runtime error that interrupts program execution.
+
+    🔹 What is try and except?
+        Used to catch and handle errors safely.
+
+    🔹 What is finally?
+        finally block always executes whether an exception occurs or not.
+
+    🔹 What are multiple exceptions?
+        Handling more than one error using multiple except blocks.
+
+    🔹 What is a custom exception?
+        User-defined exception created using Exception class.
+
+6. Class and Object (OOP)
+    🔹 What is a class?
+        A class is a blueprint for creating objects.
+
+    🔹 What is an object?
+        An object is an instance of a class.
+
+    🔹 What are attributes?
+        Variables defined inside a class.
+
+    🔹 What are methods?
+        Functions defined inside a class.
+
+    🔹 Difference between local and global variables?
+        Local → defined inside a function
+        Global → defined outside a function
+
+7. Inheritance
+    🔹 What is inheritance?
+        Inheritance allows one class to acquire properties of another class.
+
+    🔹 Types of inheritance:
+        Single
+        Multilevel
+        Multiple
+        Hierarchical
+        Hybrid
+
+    🔹 What is super()?
+        Used to access parent class methods or variables.
+
+8. Method Overloading and Overriding
+    🔹 What is method overloading?
+        Using the same method name with different parameters.
+
+    🔹 Does Python support method overloading?
+        No, Python supports it using *args.
+
+    🔹 What is method overriding?
+        Redefining a parent class method in a child class.
+
+9. SQLite3 and PyMySQL
+    🔹 What is SQLite3?
+        SQLite3 is a lightweight, file-based database.
+
+    🔹 What is PyMySQL?
+        PyMySQL is used to connect Python with MySQL database.
+
+    🔹 Why database connectors are used?
+        To execute SQL queries from Python programs.
+
+10. Search and Match Functions
+    🔹 What is re.search()?
+        Searches a pattern anywhere in the string.
+
+    🔹 What is re.match()?
+        Matches a pattern only at the beginning of the string.
+
+    🔹 Difference between search() and match()?
+        search() → anywhere
+        match() → start only
