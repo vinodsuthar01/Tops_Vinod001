@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Registration</title>
+    <link rel="stylesheet" href="{% static 'css/patient_reg.css' %}">
+    <script src="{% static  'js/patient_reg.js' %}"></script>
+</head>
+<body>
+
+<h2>{% if obj %}Edit{% else %}Register{% endif %}</h2>
+
+{% if success %}
+<p style="color:green;">Form submitted successfully!</p>
+{% endif %}
+
+<form onsubmit="return validateForm()" method="POST">
+    {% csrf_token %}
+
+    Name: <input type="text" id="name" name="name"  value="{{ patient.name|default:'' }}"><br><br>
+    Age: <input type="number" id="age" name="age" value="{{ patient.age|default:'' }}"><br><br>
+    Email: <input type="text" id="email" name="email" value="{{ patient.email|default:'' }}"><br><br>
+
+    <input type="submit" value="{% if obj %}Update{% else %}Submit{% endif %}
+">
+</form>
+
+<p id="error" style="color:red;"></p>
+<br> <br>
+<P><a href="{% url 'patient' %}">Go Back</a></P>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+-x-x-x-x-x-x-x-x-x-x-x- Module 9: Python DB & Framework (Django) – Theory -x-x-x-x-x-x-x-x-x-x-x-x-
+
+
+1. HTML in Python (Django Templates)
+
+    Django allows embedding HTML using its template engine. Templates help separate design from logic. Dynamic content can be passed from views to HTML.
+    Uses .html files inside templates folder
+    Supports variables: {{ name }}
+    Supports loops & conditions
+
+2. CSS in Django
+
+    CSS is used to style web pages. In Django, CSS files are stored in the static folder.
+    Static files: CSS, JS, images
+    Linked using {% load static %}
+    Improves UI/UX
+
+3. JavaScript with Django
+
+    JavaScript adds interactivity to web pages.
+    Used for form validation
+    Can be inline or external
+    Runs on client side
+
+4. Django Introduction
+
+    Django is a high-level Python web framework used to build secure and scalable web applications.
+
+    Advantages:
+
+        Fast development
+        Built-in admin panel
+        Secure (CSRF, SQL injection protection)
+        Django vs Flask:
+        Django → Full framework
+        Flask → Lightweight
+
+5. Virtual Environment
+
+    A virtual environment is used to create an isolated Python environment.
+    Prevents dependency conflicts
+    Created using venv
+    Helps manage packages
+
+6. Project and App Creation
+
+    A Django project is the main container, and apps are modules inside it.
+
+        manage.py → command tool
+        urls.py → routing
+        views.py → logic
+
+7. MVT Architecture
+
+    Django follows MVT (Model-View-Template):
+    Model → Database
+    View → Business logic
+    Template → UI
+    Handles request-response cycle efficiently.
+
+8. Django Admin Panel
+
+    Django provides a built-in admin interface.
+    Used to manage database
+    Easily customizable
+    Requires superuser login
+
+9. URL Patterns and Templates
+
+    URLs define navigation in Django.
+    Defined in urls.py
+    Connected to views
+    Views render templates
+
+10. Form Validation using JavaScript
+
+    JavaScript validates form data before sending to server.
+    Improves user experience
+    Reduces server load
+    Example: email, phone validation
+
+11. Database Connectivity
+
+    Django supports databases like SQLite and MySQL.
+    Default: SQLite
+    Configured in settings.py
+    Uses ORM instead of SQL
+
+12. ORM and QuerySets
+
+    ORM (Object Relational Mapping) allows interaction with database using Python.
+    No need to write SQL
+    QuerySets fetch data
+    Easy CRUD operations
+
+13. Django Forms and Authentication
+
+    Django provides built-in authentication system.
+    Signup/Login/Logout
+    Password hashing
+    Form handling using forms.py
+
+14. CRUD using AJAX
+
+    AJAX allows updating data without reloading the page.
+    Improves performance
+    Uses JavaScript + backend
+    Sends async requests
+
+15. Customizing Admin Panel
+
+    Admin panel can be customized:
+    Display fields
+    Add filters & search
+    Improve UI
+
+16. Payment Integration (Paytm)
+
+    Payment gateways allow online transactions.
+    Secure payment system
+    Used in real-world apps
+    Requires API keys
+
+17. GitHub Deployment
+
+    GitHub is used for version control.
+    Store code online
+    Track changes
+    Collaboration
+
+18. Live Deployment (PythonAnywhere)
+
+    Deploying project makes it accessible online.
+    Upload project
+    Configure server
+    Run Django app
+
+19. Social Authentication
+
+    Allows login using social accounts.
+    Google, Facebook login
+    Uses OAuth2
+    Improves user experience
+
+20. Google Maps API
+
+    Google Maps API is used to display locations.
+    Shows doctor location
+    Requires API key
+    Embedded in web pages

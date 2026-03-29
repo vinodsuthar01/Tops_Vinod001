@@ -1,0 +1,19 @@
+/* Creator Cards */
+
+.creator-card {
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px #ccc;
+    text-align: left;
+}
+
+.creator-card h2 {
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.creator-card p {
+    margin: 5px 0;
+}

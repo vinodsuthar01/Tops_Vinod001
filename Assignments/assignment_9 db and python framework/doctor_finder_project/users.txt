@@ -1,0 +1,27 @@
+===============================
+   DOCTOR FINDER PROJECT
+   DEMO LOGIN CREDENTIALS
+===============================
+
+ADMIN LOGIN
+-------------------------------
+Username: acer
+Password: 1234
+
+
+DOCTOR LOGIN
+-------------------------------
+Doctor 1
+Username: vs1234
+Password: 1234
+
+Doctor 2
+Username: km1234
+Password: 1234
+
+
+===============================
+NOTE:
+- These credentials are for demo/testing purposes only.
+- Do NOT use simple passwords like "1234" in real applications.
+===============================
