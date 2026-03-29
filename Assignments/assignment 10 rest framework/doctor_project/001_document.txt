@@ -1,0 +1,97 @@
+====================================================
+DOCTOR FINDER API DOCUMENTATION
+====================================================
+
+BASE URL:
+http://127.0.0.1:8000/api/
+
+----------------------------------------------------
+1. GET ALL DOCTORS (WITH PAGINATION)
+----------------------------------------------------
+URL:
+GET /api/doctors/
+
+DESCRIPTION:
+Fetch list of all doctors (paginated)
+
+RESPONSE:
+{
+  "count": 5,
+  "next": "...",
+  "previous": null,
+  "results": [
+    {
+      "id": 1,
+      "name": "Dr. Vinod",
+      "specialty": "Cardiologist",
+      "contact": "9876543210"
+    }
+  ]
+}
+
+----------------------------------------------------
+2. CREATE DOCTOR
+----------------------------------------------------
+URL:
+POST /api/doctors/
+
+BODY (JSON):
+{
+  "name": "Dr. Raj",
+  "specialty": "Dentist",
+  "contact": "9999999999"
+}
+
+RESPONSE:
+Doctor created successfully
+
+----------------------------------------------------
+3. GET SINGLE DOCTOR
+----------------------------------------------------
+URL:
+GET /api/doctors/<id>/
+
+EXAMPLE:
+GET /api/doctors/1/
+
+----------------------------------------------------
+4. UPDATE DOCTOR
+----------------------------------------------------
+URL:
+PUT /api/doctors/<id>/
+
+BODY:
+{
+  "name": "Dr. Updated",
+  "specialty": "Skin",
+  "contact": "8888888888"
+}
+
+----------------------------------------------------
+5. DELETE DOCTOR
+----------------------------------------------------
+URL:
+DELETE /api/doctors/<id>/
+
+----------------------------------------------------
+PAGINATION
+----------------------------------------------------
+DEFAULT PAGE SIZE: 2
+
+Example:
+GET /api/doctors/?page=2
+
+----------------------------------------------------
+TECHNOLOGY USED
+----------------------------------------------------
+- Django
+- Django REST Framework
+- SQLite Database
+
+----------------------------------------------------
+NOTES
+----------------------------------------------------
+- API follows REST principles
+- Supports CRUD operations
+- Uses JSON format
+====================================================

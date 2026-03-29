@@ -1,0 +1,71 @@
+MODULE 10: DJANGO REST FRAMEWORK (DRF)
+
+
+1. INTRODUCTION TO APIs
+API allows communication between applications.
+Types: REST (JSON), SOAP (XML)
+Importance: Connect frontend and backend systems.
+
+2. REQUIREMENTS FOR WEB DEVELOPMENT
+Understand project requirements.
+Install packages like Django, DRF, requests.
+Use requirements.txt file.
+
+3. SERIALIZATION IN DRF
+Serialization converts Django data into JSON format.
+Used for sending data through APIs.
+
+4. REQUESTS AND RESPONSES
+HTTP Methods:
+GET - Fetch data
+POST - Create data
+PUT - Update data
+DELETE - Remove data
+
+5. VIEWS IN DRF
+Function-Based Views (FBV)
+Class-Based Views (CBV)
+CBV is more reusable and cleaner.
+
+6. URL ROUTING
+URLs connect requests to views.
+/doctors/
+/doctors/<id>/
+
+7. PAGINATION
+Used to divide large data into pages.
+
+8. SETTINGS CONFIGURATION
+Configure database, static files, API keys.
+
+9. PROJECT SETUP
+Create Django project and app.
+Add models, serializers, views.
+
+10. SOCIAL AUTHENTICATION & OTP
+Login using Google/Facebook.
+Send OTP using APIs like Twilio.
+
+11. RESTFUL API DESIGN
+Stateless architecture.
+Use HTTP methods for CRUD operations.
+
+12. CRUD API
+Create, Read, Update, Delete operations.
+
+13. AUTHENTICATION & AUTHORIZATION
+Authentication = identity
+Authorization = permissions
+Use token-based authentication.
+
+14. API INTEGRATIONS
+OpenWeatherMap - Weather data
+Google Maps - Location data
+GitHub API - Repository data
+Twitter API - Tweets
+REST Countries API - Country info
+SendGrid - Email sending
+Twilio - SMS/OTP
+Stripe - Payment integration
+
+====================================================
