@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Writesphere</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+{% include 'partials/header.html' %}
+
+{% block content %}
+<!-- Page content will come here -->
+{% endblock %}
+
+{% include 'partials/footer.html' %}
+
+</body>
+</html>

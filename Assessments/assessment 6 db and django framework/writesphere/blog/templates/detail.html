@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %} {% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>{{ post.title }}</h2>
+    {% if post.cover_image %}
+    <img src="{{ post.cover_image.url }}" class="cover-img">
+    {% endif %}
+    <p>{{ post.content }}</p>
+    {% if can_edit %}
+        <a class='btn' href="{% url 'update' post.id %}">Edit</a>
+        <a class="btn" href="{% url 'delete' post.id %}">Delete</a>
+    {% endif %}
+
+    <form action="{% url 'like' post.id %}" method="POST">
+        {% csrf_token %}
+        <button class="like-btn">
+            ❤️ {{ post.like_set.count }}
+        </button>
+    </form>
+    
+    <div class="comment-box">
+        <form method="POST" action="{% url 'comment' post.id %}">
+            {% csrf_token %}
+            <textarea name="content" placeholder="Write a comment..."></textarea>
+            <button>Add Comment</button>
+        </form>
+    </div>
+
+    {% for comment in post.comment_set.all %}
+        <div class="comment">
+            <strong>{{ comment.user.username }}</strong>
+            <p>{{ comment.content }}</p>
+            {% if user == comment.user %}
+            <a href="{% url 'edit_comment' comment.id %}" class="btn">Edit</a>
+
+            <form action="{% url 'delete_comment' comment.id %}" method="POST" style="display:inline;">
+                {% csrf_token %}
+                <button class="btn logout">Delete</button>
+            </form>
+        {% endif %}
+        </div>
+    {% endfor %}
+
+
+    
+
+    <form method="POST" action="{% url 'follow' post.author.id %}">
+        {% csrf_token %}
+        <button class="follow-btn {% if is_following %}following{% endif %}">
+            {% if is_following %}
+                Following
+            {% else %}
+                Follow
+            {% endif %}
+        </button>
+    </form><br><br>
+    
+
+    <a class="btn" href="{% url 'home'  %}">Back</a>
+
+    
+</div>
+{% endblock %}
+
+

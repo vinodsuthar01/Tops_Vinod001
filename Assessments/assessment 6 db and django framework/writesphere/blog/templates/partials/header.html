@@ -1,0 +1,29 @@
+<nav class="navbar">
+    
+    <!-- Left Side -->
+    <div class="nav-left">
+        <a href="{% url 'home' %}" class="logo">Writesphere</a>
+    </div>
+
+    <!-- Right Side -->
+    <div class="nav-right">
+
+        {% if user.is_authenticated %}
+            <span class="user-info">
+                👤 {{ user.username }} ({{ user.role }})
+            </span>
+
+            {% if user.role == 'AUTHOR' or user.role == 'ADMIN' %}
+                <a href="{% url 'create' %}" class="btn">+ New Post</a>
+            {% endif %}
+
+            <a href="{% url 'logout' %}" class="btn logout">Logout</a>
+
+        {% else %}
+            <a href="{% url 'login' %}" class="btn">Login</a>
+            <a href="{% url 'register' %}" class="btn register">Register</a>
+        {% endif %}
+
+    </div>
+
+</nav>
