@@ -3,13 +3,17 @@
 {% block content %}
 
 <div class="card">
-    <h3>Edit Comment</h3>
+    <h3 align="center">Edit Comment</h3>
 
-    <form method="POST">
-        {% csrf_token %}
-        <textarea name="content">{{ comment.content }}</textarea><br><br>
-        <button class="btn">Update</button>
-    </form>
+    <div class="form-container">
+        <div class="form-card">
+            <form  method="POST">
+                {% csrf_token %}
+                <textarea name="content">{{ comment.content }}</textarea><br><br>
+                <button class="btn">Update</button>
+            </form>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

@@ -4,15 +4,24 @@
 
 {% block content %}
 <div class="card">
-    <h2>Create Post</h2>
+    <h2 align="center">Create Post</h2>
 
-    <form class="form" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <input type="text" name="title" placeholder="Title"><br><br>
-        <textarea name="content" placeholder="Content"></textarea><br><br>
-        <input type="file" name="cover_image"><br><br>
-        <button class="btn" type="submit">Save</button>
-    </form><br><br>
+    <div class="form-container">
+        <div class="form-card">
+
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <input type="text" name="title" placeholder="Title">
+                <textarea name="content"></textarea>
+
+                <input type="file" name="cover_image">
+
+                <button>Save</button>
+            </form>
+
+        </div>
+    </div>
     <a class="btn" href="{% url 'home'  %}">Back</a>
 
 </div>

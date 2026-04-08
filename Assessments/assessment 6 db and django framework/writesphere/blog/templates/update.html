@@ -3,15 +3,21 @@
 {% block title %} {% endblock %}
 
 {% block content %}
-<h1>Update Post</h1>
 <div class="card">
-    <form method="POST">
-        {% csrf_token %}
-        <input type="text" name="title" value="{{ post.title }}"><br><br>
-        <textarea name="content">{{ post.content }}</textarea><br><br>
-        <button class="btn" type="submit">Update</button>
-    </form> <br><br>
-    <a class="btn" href="{% url 'home'  %}">Back</a>
+    <h1 align="center">Update Post</h1>
+
+    <div class="form-container">
+        <div class="form-card">
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="title" value="{{ post.title }}"><br><br>
+                <textarea name="content">{{ post.content }}</textarea><br><br>
+                <button class="btn" type="submit">Update</button>
+            </form> <br><br>
+            <a class="btn" href="{% url 'home'  %}">Back</a>
+        </div>
+    </div>
+    
 
 </div>
 {% endblock %}
