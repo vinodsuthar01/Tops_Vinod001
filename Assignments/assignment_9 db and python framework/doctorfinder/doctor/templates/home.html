@@ -1,0 +1,44 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Finder</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+{% if user.is_authenticated %}
+    <h3>Hello {{ user.username }}</h3>
+    <a href="{% url 'account_logout' %}" class="btn logout">Logout</a>
+{% else %}
+    <a href="{% url 'account_login' %}" class="btn login">Login</a>
+    <a href="{% provider_login_url 'google' %}" class="btn google">Google Login</a>
+{% endif %}
+
+<h1>Doctor Finder 🏥</h1>
+
+<form onsubmit="addDoctor(); return false;">
+    {% csrf_token %}
+    <input type="text" id="name" placeholder="Doctor Name">
+    <input type="text" id="spec" placeholder="Specialization">
+    <input type="text" id="loc" placeholder="Location">
+    <button>Add</button>
+</form>
+
+<div id="list">
+{% for d in doctors %}
+<div class="card">
+    <h3>{{ d.name }}</h3>
+    <p>{{ d.specialization }}</p>
+    <p>{{ d.location }}</p>
+    <a href="/delete/{{ d.id }}">Delete</a>
+</div>
+{% endfor %}
+</div>
+
+<iframe src="https://www.google.com/maps?q=surat&output=embed"></iframe>
+
+</body>
+</html>
