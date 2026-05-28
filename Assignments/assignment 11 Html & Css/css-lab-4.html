@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .grid-container{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:20px;
+        padding:20px;
+    }
+
+    .card{
+        border:1px solid gray;
+        padding:20px;
+        text-align:center;
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:scale(1.05);
+    }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+
+    <div class="card">
+        <img src="images/leptop-img.avif">
+        <h3>Laptop</h3>
+        <p>₹50000</p>
+    </div>
+
+    <div class="card">
+        <img src="images/mobile-img.jpg">
+        <h3>Mobile</h3>
+        <p>₹20000</p>
+    </div>
+
+    <div class="card">
+        <img src="images/teblet-img.jpg">
+        <h3>Tablet</h3>
+        <p>₹15000</p>
+    </div>
+
+</div>
+
+</body>
+</html>

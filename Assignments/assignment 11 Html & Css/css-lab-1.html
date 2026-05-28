@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styled Form</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body{
+            background-color:#f2f2f2;
+        }
+
+        #contact-form{
+            background-color:white;
+            width:300px;
+            padding:20px;
+            margin:50px auto;
+        }
+
+        .input-field{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        #submit-btn{
+            background-color:blue;
+            color:white;
+            padding:10px;
+            border:none;
+        }
+
+        #submit-btn:hover{
+            background-color:darkblue;
+        }
+    </style>
+</head>
+<body>
+
+<form id="contact-form">
+
+    <h1 class="title">Contact Form</h1>
+
+    <label for="name">Name</label>
+    <input type="text" class="input-field" id="name">
+
+    <label for="email">Email</label>
+    <input type="email" class="input-field" id="email">
+
+    <button id="submit-btn">Submit</button>
+
+</form>
+
+</body>
+</html>

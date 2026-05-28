@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Responsive Website</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            background:#f4f4f4;
+            line-height:1.6;
+        }
+
+        /* Header */
+
+        .header{
+            background:#1f1f1f;
+            color:white;
+            padding:20px 50px;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-wrap:wrap;
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        .navbar{
+            display:flex;
+            gap:20px;
+        }
+
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .navbar a:hover{
+            color:yellow;
+        }
+
+        /* Hero Section */
+
+        .hero{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:60px 50px;
+            gap:40px;
+            flex-wrap:wrap;
+        }
+
+        .hero-text{
+            flex:1;
+        }
+
+        .hero-text h1{
+            font-size:45px;
+            margin-bottom:20px;
+        }
+
+        .hero-text p{
+            margin-bottom:20px;
+            font-size:18px;
+        }
+
+        .hero-text button{
+            padding:12px 25px;
+            background:#222;
+            color:white;
+            border:none;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .hero-text button:hover{
+            background:#555;
+        }
+
+        .hero-image{
+            flex:1;
+            text-align:center;
+        }
+
+        .hero-image img{
+            width:100%;
+            max-width:400px;
+            border-radius:10px;
+        }
+
+        /* Content Section */
+
+        .content{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            padding:40px 50px;
+            flex-wrap:wrap;
+        }
+
+        .box{
+            background:white;
+            padding:25px;
+            flex:1 1 250px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .box:hover{
+            transform:scale(1.05);
+        }
+
+        /* Footer */
+
+        .footer{
+            background:#1f1f1f;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        /* Tablet Responsive */
+
+        @media(max-width:992px){
+
+            .hero{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .hero-text h1{
+                font-size:36px;
+            }
+
+        }
+
+        /* Mobile Responsive */
+
+        @media(max-width:768px){
+
+            .header{
+                flex-direction:column;
+                text-align:center;
+                gap:15px;
+                padding:20px;
+            }
+
+            .navbar{
+                flex-direction:column;
+            }
+
+            .hero{
+                padding:30px 20px;
+            }
+
+            .hero-text h1{
+                font-size:28px;
+            }
+
+            .hero-text p{
+                font-size:16px;
+            }
+
+            .content{
+                flex-direction:column;
+                padding:20px;
+            }
+
+            .box{
+                width:100%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        MyBrand
+    </div>
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-text">
+        <h1>Modern Responsive Website</h1>
+
+        <p>
+            Create responsive layouts using CSS Flexbox
+            and Media Queries.
+        </p>
+
+        <button>Learn More</button>
+    </div>
+
+    <div class="hero-image">
+        <img src="images/hero-div-background-img.jpg" alt="Hero Image">
+    </div>
+
+</section>
+
+<section class="content">
+
+    <div class="box">
+        <h2>Web Design</h2>
+        <p>Responsive and modern designs.</p>
+    </div>
+
+    <div class="box">
+        <h2>Development</h2>
+        <p>Frontend and backend development.</p>
+    </div>
+
+    <div class="box">
+        <h2>SEO</h2>
+        <p>Improve website visibility.</p>
+    </div>
+
+</section>
+
+<footer class="footer">
+    <p>© 2026 Responsive Website</p>
+</footer>
+
+</body>
+</html>

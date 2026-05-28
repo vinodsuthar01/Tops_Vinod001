@@ -1,0 +1,147 @@
+1. HTML Basics
+Theory
+
+Question 1: Define HTML. What is the purpose of HTML in web development?
+
+    HTML (HyperText Markup Language) is the standard markup language used to create webpages. It 
+    structures content on the internet using elements and tags.
+
+    Purpose of HTML:
+
+    Creates webpage structure
+    Displays text, images, links, tables, and forms
+    Connects webpages using hyperlinks
+    Works with CSS and JavaScript for design and functionality
+
+Question 2: Explain the basic structure of an HTML document.
+
+    Basic Structure:
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Page Title</title>
+        </head>
+        <body>
+
+        </body>
+        </html>
+
+    Mandatory Tags:
+
+        <!DOCTYPE html> → Defines HTML5 document
+        <html> → Root element of webpage
+        <head> → Contains metadata and title
+        <title> → Displays webpage title in browser tab
+        <body> → Contains visible webpage content
+
+
+Question 3: Difference between block-level and inline elements.
+    Block-Level Elements	            
+        Takes full width	            
+        Starts on new line	            
+        Example: <div>, <p> 
+    
+    Inline Elements
+        Does not start new line	        
+        Takes only required width
+        Example: <span>, <a>
+
+
+Question 4: Role of semantic HTML.
+
+    Semantic HTML gives meaning to webpage structure.
+
+    Importance:
+
+        Improves accessibility
+        Helps search engines understand content
+        Better SEO
+        Cleaner code
+
+    Examples:
+
+        <header>
+        <footer>
+        <main>
+        <article>
+        <section>
+        <aside>
+
+
+2. HTML Forms
+Theory
+
+Question 1: What are HTML forms used for?
+
+    HTML forms collect user information.
+
+    Elements:
+
+        input → Takes user input
+        textarea → Multi-line text input
+        select → Dropdown menu
+        button → Submits form
+
+
+Question 2: Difference between GET and POST.
+    GET	
+        Data visible in URL
+        Less secure	
+        Used for searching	
+    
+    POST
+        Data hidden
+        More secure
+        Used for sensitive data
+
+    Use:
+
+        GET → Search forms
+        POST → Login and registration forms
+
+
+Question 3: Purpose of label element.
+
+    <label> describes form fields.
+
+    Benefits:
+
+        Improves accessibility
+        Helps screen readers
+        Easier to click input fields
+
+
+3. HTML Tables
+Theory 
+
+Question 1: Explain HTML table structure.
+    Element	Purpose
+        <table>	Creates table
+        <tr>	Table row
+        <th>	Table heading
+        <td>	Table data
+        <thead>	Groups header content
+
+Question 2: Difference between colspan and rowspan.
+    colspan → Merges columns
+    rowspan → Merges rows
+
+    Example:
+
+        <td colspan="2">Merged Columns</td>
+        <td rowspan="2">Merged Rows</td>
+
+
+Question 3: Why avoid tables for layout?
+
+    Tables make layouts:
+
+        Difficult to manage
+        Less responsive
+        Bad for accessibility
+
+    Better Alternative:
+
+        CSS Flexbox
+        CSS Grid

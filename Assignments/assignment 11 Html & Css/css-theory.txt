@@ -1,0 +1,221 @@
+Module 16) CSS in Full Stack Course
+THEORY 
+
+4. CSS Selectors & Styling
+
+Question 1: What is a CSS selector?
+
+    A CSS selector is used to select HTML elements and apply styles to them.
+
+    Types of Selectors
+        1. Element Selector
+            Selects HTML elements directly.
+
+            p{
+                color: blue;
+            }
+
+        2. Class Selector
+            Selects elements using class name.
+
+            .box{
+                background-color: yellow;
+            }
+
+        3. ID Selector
+            Selects a unique element using ID.
+
+            #header{
+                color: red;
+            }
+
+
+Question 2: Explain CSS specificity.
+
+    CSS specificity decides which style is applied when multiple styles target the same element.
+
+    Priority Order:
+
+        Inline CSS
+        ID Selector
+        Class Selector
+        Element Selector
+
+    Example:
+
+        p{
+            color: blue;
+        }
+
+        .text{
+            color: green;
+        }
+
+        #para{
+            color: red;
+        }
+
+    If an element has all selectors, red color applies because ID selector has higher specificity.
+
+
+
+Question 3: Difference between internal, external, and inline CSS.
+
+Type	            Description	                    Advantages	                Disadvantages
+Inline CSS	    Written inside HTML element	    Quick styling	            Hard to manage
+Internal CSS	Written inside <style> tag	    Good for single page	    Cannot reuse
+External CSS	Separate CSS file	            Reusable and clean	        Requires extra file
+
+
+5. CSS Box Model
+
+Question 1: Explain CSS box model.
+
+    The CSS box model describes how element size is calculated.
+
+    Components:
+
+        Content → Actual text/image
+        Padding → Space inside border
+        Border → Surrounds padding
+        Margin → Space outside border
+
+    Example:
+
+        div{
+            padding:20px;
+            border:2px solid black;
+            margin:10px;
+        }
+
+
+Question 2: Difference between border-box and content-box.
+        content-box	                        border-box
+    Default value	                    Includes padding and border in width
+    Width only applies to content	    Total size remains fixed
+
+    Example:
+
+        box-sizing: border-box;
+
+        Default box-sizing:
+
+        box-sizing: content-box;
+
+
+6. CSS Flexbox
+
+Question 1: What is Flexbox?
+
+Flexbox is a CSS layout system used for arranging items in rows or columns.
+
+    Terms
+        Flex Container → Parent element
+        Flex Item → Child elements
+
+    Example:
+
+        .container{
+            display:flex;
+        }
+
+
+Question 2: Explain Flexbox properties.
+    justify-content
+        Aligns items horizontally.
+        
+    align-items
+        Aligns items vertically.
+
+    flex-direction
+        Sets direction of items.
+
+    Options:
+
+        row
+        column
+
+
+7. CSS Grid
+
+Question 1: Explain CSS Grid.
+
+    CSS Grid is a two-dimensional layout system.
+
+    Difference:
+
+        Flexbox → One-dimensional
+        Grid → Two-dimensional
+
+    Use Grid when:
+
+        Creating webpage layouts
+        Product grids
+        Dashboards
+
+
+Question 2: Explain grid properties.
+    grid-template-columns
+
+    Defines columns.
+
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows
+
+    Defines rows.
+
+        grid-template-rows: auto auto;
+        grid-gap
+
+    Adds spacing.
+
+        gap:20px;
+
+
+8. Responsive Web Design with Media Queries
+
+Question 1: What are media queries?
+
+    Media queries apply styles based on screen size.
+
+    Importance:
+
+        Makes websites mobile-friendly
+        Improves responsiveness
+        Better user experience
+
+
+Question 2: Media query example.
+    @media screen and (max-width:600px){
+
+        body{
+            font-size:14px;
+        }
+
+    }
+
+
+9. Typography and Web Fonts
+
+Question 1: Difference between web-safe and custom fonts.
+        Web-safe Fonts	            Custom Fonts
+    Pre-installed	        Downloaded online
+    Faster loading	        Better design
+    Example: Arial	        Example: Poppins
+
+    Web-safe fonts are used for better compatibility and faster performance.
+
+Question 2: What is font-family?
+
+    font-family changes text font.
+
+    Example:
+
+        body{
+            font-family: Arial;
+        }
+    Google Font Example
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        body{
+            font-family:'Poppins', sans-serif;
+        }
