@@ -1,0 +1,121 @@
+Introduction to OOPS Programming
+
+Section A: Concept Application (Theory)
+
+1. Compiler vs Interpreter in Food Delivery Application
+
+    While building a food delivery application, I would prefer using a compiler during the final deployment stage.
+
+    A compiler converts the entire source code into machine code before execution. This provides:
+
+        Faster execution speed
+        Better performance
+        Early error detection during compilation
+        Easier deployment as executable files
+
+    An interpreter executes code line by line. It is useful during testing and development because 
+    debugging becomes easier, but execution is slower.
+
+    For a food delivery app where performance and quick response are important, a compiler is better
+    for production deployment.
+
+2. Programming Constructs for Employee Salary Calculation
+
+    To calculate employee salary with bonus, tax, and overtime conditions efficiently, I would combine:
+
+    Variables
+    Arithmetic operators
+    Conditional statements (if-else)
+    Functions
+
+    Example:
+
+        Use variables for salary, tax, overtime
+        Use arithmetic operations for calculations
+        Use if-else conditions for bonus eligibility
+        Use functions to organize calculation logic
+
+    This makes the program modular, readable, and easy to maintain.
+
+3. Why Loops are Preferred in Menu-Driven Programs
+
+Loops are preferred because they allow the program menu to repeat continuously until the user chooses 
+to exit.
+Without loops, the menu would run only once.
+
+I would choose a do-while loop because:
+
+    The menu must display at least once
+    It keeps repeating until the exit condition is selected
+
+Example:
+
+    do {
+    // menu code
+    } while(choice != 0);
+
+    This improves user interaction and avoids repetitive code.
+
+
+4. Incorrect Average Marks Using int Variables
+
+    The probable cause is integer division.
+
+    If average marks are stored using int, decimal values are removed automatically.
+
+    Example:
+
+    int avg = (85 + 86 + 87) / 3;
+
+    Output becomes:
+
+    86
+
+    Instead of:
+
+    86.66
+
+    Using float or double solves the issue because they store decimal values accurately.
+
+    Example:
+
+        float avg = (85 + 86 + 87) / 3.0;
+5. Program Compiles but Crashes at Runtime
+
+    This is called a runtime error.
+
+    Examples:
+
+        Division by zero
+        Invalid memory access
+        Null pointer usage
+
+    Two debugging practices:
+
+        Use print statements or debugger tools to identify where the crash occurs
+        Check input values and memory handling carefully
+
+    These practices help locate and fix the problem quickly.
+
+
+
+6. Why Structure is Better than Multiple Arrays
+
+    A structure is better because it stores related data together in a single unit.
+
+    Example:
+
+        struct Student {
+        char name[50];
+        int marks;
+        char grade;
+        };
+
+    Advantages over multiple arrays:
+
+        Better organization
+        Easier data management
+        Reduces confusion
+        Improves readability
+
+    Using multiple arrays separately can become difficult to maintain for large records.
