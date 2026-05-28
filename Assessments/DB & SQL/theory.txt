@@ -1,0 +1,115 @@
+Section A: Concept Application
+1. How relational databases maintain accuracy in expense records
+
+    Relational databases maintain accuracy by organizing data into related tables using primary keys and foreign keys.
+
+    In the expense tracker:
+
+        The users table stores user details
+        The categories table stores expense categories
+        The expenses table links both tables
+
+    This relationship prevents duplicate and invalid data.
+    For example, an expense cannot be added for a non-existing user because of foreign key constraints.
+
+    This improves:
+
+        Data consistency
+        Accuracy
+        Reliability
+        Easy data management
+
+
+
+2. Importance of constraints in personal finance data
+
+    Constraints help protect the database from incorrect or invalid entries.
+
+    Examples:
+
+        PRIMARY KEY prevents duplicate IDs
+        FOREIGN KEY maintains table relationships
+        NOT NULL prevents empty important fields
+        UNIQUE prevents duplicate emails
+
+    In personal finance systems, constraints ensure:
+
+        Correct expense records
+        Accurate balance calculations
+        Secure and reliable data storage
+
+
+
+3. How GROUP BY helps analyze spending patterns
+
+    GROUP BY groups similar data together for analysis.
+
+    Example:
+
+        SELECT category_name, SUM(amount)
+        FROM expenses
+        GROUP BY category_name;
+
+    This helps:
+
+        Calculate total spending per category
+        Identify highest expense categories
+        Analyze monthly spending habits
+
+    It makes financial reporting easier and more meaningful.
+
+4. Scenario where ROLLBACK is required
+
+    Suppose a user accidentally enters:
+
+        50000
+
+        Instead of:
+
+        500
+
+        While recording an expense.
+
+        Before saving permanently, the transaction can be reversed using:
+
+        ROLLBACK;
+
+        This restores the previous correct state of the database and prevents incorrect financial data.
+
+
+
+5. How views help users track monthly expenses
+
+    Views create virtual tables from existing data.
+
+    Example:
+
+    A monthly expense view can display only required fields like:
+        User name
+        Expense amount
+        Date
+        Category
+
+    Benefits:
+
+        Simplifies complex queries
+        Improves security
+        Makes reporting easier
+        Saves time for repeated analysis
+
+
+6. Why triggers are used for automatic updates
+
+    Triggers execute automatically when database events occur.
+
+    Example:
+
+        Automatically updating total balance after adding an expense
+        Automatically assigning categories
+
+    Benefits:
+
+        Reduces manual work
+        Maintains consistency
+        Prevents calculation mistakes
+        Automates repetitive tasks
