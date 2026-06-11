@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // task 7,8
+        // Use const to create an array called favoriteSongs containing three song titles you like on Spotify. Try to add a fourth song using push(), then print the array. Explain in a comment why this works even though the array was declared with const.<br><br><em><strong>Hint:</strong> const prevents reassignment of the variable, not mutation of the array contents.</em>
+
+        const favoriteSongs = [
+            "Gorbandh",
+            "Choudhary",
+            "Goomer"
+        ]
+
+        favoriteSongs.push("Rait Zara Si");
+        console.log(favoriteSongs);
+
+        // because const is array itself not their value
+    </script>
+</body>
+</html>

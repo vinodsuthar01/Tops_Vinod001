@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // task 10,11
+        // Create two variables: let user1 = 'Priya' and let user2 = user1. Change user1
+        // to 'Riya' and print both variables. Then, create two arrays: let favApps1 = 
+        // ['Instagram', 'Spotify'] and let favApps2 = favApps1. Push 'Zomato' to 
+        // favApps1 and print both arrays. Observe and comment on the difference in 
+        // behavior between primitive and reference types.
+
+        let user1 = "priya";
+        let user2 = user1;
+
+        user1 = "riya";
+
+        console.log(user1, user2);
+
+        let favApps1 = ['Instagram', 'Spotify'];
+        let favApps2 = favApps1;
+
+        favApps1.push("Zommato");
+
+        console.log(favApps1, favApps2);
+
+        // in this process java script use same reference to create to variable
+
+    </script>
+</body>
+</html>
