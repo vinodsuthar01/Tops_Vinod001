@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q10</title></head>
+<body>
+<!-- Q10: Product search with callback and promise -->
+<script>
+  const products = [
+    { name: "Laptop" },
+    { name: "Phone" },
+    { name: "Shoes" }
+  ];
+
+  // Callback version
+  function searchProductsCallback(term, callback) {
+    setTimeout(() => {
+      const results = products.filter(p => p.name.toLowerCase().includes(term.toLowerCase()));
+      callback(results);
+    }, 1000);
+  }
+  searchProductsCallback("Phone", res => console.log("Callback:", res));
+
+  // Promise version
+  function searchProductsPromise(term) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        const results = products.filter(p => p.name.toLowerCase().includes(term.toLowerCase()));
+        resolve(results);
+      }, 1000);
+    });
+  }
+  searchProductsPromise("Shoes").then(res => console.log("Promise:", res));
+</script>
+</body>
+</html>

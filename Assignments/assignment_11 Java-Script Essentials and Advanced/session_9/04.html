@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q6</title></head>
+<body>
+<!-- Q6: saveRecentSearch adds query to array and saves in localStorage -->
+<script>
+  let searches = [];
+  function saveRecentSearch(query) {
+    searches.push(query);
+    localStorage.setItem("recentSearches", JSON.stringify(searches));
+  }
+  saveRecentSearch("Biryani");
+  saveRecentSearch("Sneakers");
+  console.log(localStorage.getItem("recentSearches"));
+</script>
+</body>
+</html>

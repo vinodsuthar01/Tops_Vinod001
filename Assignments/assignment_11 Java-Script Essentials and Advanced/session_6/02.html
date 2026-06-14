@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Build a small form with an input box and a button labeled 'Add Song'. When the button is clicked, use querySelector to get the input value and dynamically add a new <li> element with the song name to a <ul id="playlist"> on the page.
+ -->
+
+    
+    <input type="text" name="" id="input-value" value="">
+    <button id="add-song" onclick="add()">Add Songs</button>
+    
+
+    <ul id="playlist"><strong>My Playlist</strong></ul>
+        
+    <script>
+        function add() {
+            let songName = document.querySelector("#input-value").value;
+            
+            let li = document.createElement("li");
+            
+            let playlist = document.querySelector("#playlist");
+             
+            playlist.appendChild(li);
+        }
+
+    </script>
+</body>
+</html>

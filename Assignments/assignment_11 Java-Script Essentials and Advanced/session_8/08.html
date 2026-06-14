@@ -1,0 +1,41 @@
+<!--  Create an array called orders, where each order is an object with properties: orderId, items (an array of objects with itemName and price), and delivery (an object with address and status). Write a loop to display each order's orderId and total price of all items.<br><br><em><strong>Hint:</strong> Use a nested loop or array method to sum the prices inside each order.</em>
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const orders = [
+            {
+                orderId: 101,
+                items: [
+                    { itemName: "Book", price: 500 },
+                    { itemName: "Pen", price: 50 }
+                ],
+                delivery: { address: "Surat", status: "Delivered" }
+            },
+            {
+                orderId: 102,
+                items: [
+                    { itemName: "Shoes", price: 2000 },
+                    { itemName: "Socks", price: 200 }
+                ],
+                delivery: { address: "Mumbai", status: "Pending" }
+            }
+        ];
+
+        orders.forEach(order => {
+            let total = order.items.reduce((sum, item) => sum + item.price, 0);
+            console.log(`Order ${order.orderId} - Total Price: ₹${total}`);
+        });
+
+    </script>
+</body>
+
+</html>

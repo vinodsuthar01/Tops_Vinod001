@@ -1,0 +1,41 @@
+<!-- Log the type and coordinates (clientX, clientY) of any mouse event (click, mouseover, etc.) when the user interacts with a Flipkart-style 'Add to Cart' button, using the event object.<br><br><em><strong>Hint:</strong> Access event.type, event.clientX, and event.clientY inside your event handler.</em>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add to Cart Event</title>
+  <style>
+    #add-to-cart-btn {
+      background-color: #2874f0; /* Flipkart blue */
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #add-to-cart-btn:hover {
+      background-color: #0a4fb3;
+    }
+  </style>
+</head>
+<body>
+  <button id="add-to-cart-btn">Add to Cart</button>
+
+  <script>
+    let btn = document.querySelector("#add-to-cart-btn");
+
+    // Attach multiple mouse event listeners
+    ["click", "mouseover", "mouseout"].forEach(eventType => {
+      btn.addEventListener(eventType, function(event) {
+        console.log(
+          `Event: ${event.type}, X: ${event.clientX}, Y: ${event.clientY}`
+        );
+      });
+    });
+  </script>
+</body>
+</html>

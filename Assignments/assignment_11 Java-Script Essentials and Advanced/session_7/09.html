@@ -1,0 +1,42 @@
+<!-- Display the X and Y coordinates of the mouse when you click anywhere inside a div by using the event object in your click event handler.<br><br><em><strong>Hint:</strong> Use event.clientX and event.clientY to get coordinates.</em>
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Coordinates</title>
+  <style>
+    #click-area {
+      width: 400px;
+      height: 200px;
+      background-color: lightblue;
+      border: 2px solid navy;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    #coords {
+      margin-top: 15px;
+      font-weight: bold;
+      color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="click-area">Click anywhere inside this box</div>
+  <div id="coords">Coordinates: (X, Y)</div>
+
+  <script>
+    let area = document.querySelector("#click-area");
+    let coordsDisplay = document.querySelector("#coords");
+
+    area.addEventListener("click", function(event) {
+      let x = event.clientX;
+      let y = event.clientY;
+      coordsDisplay.textContent = `Coordinates: (${x}, ${y})`;
+    });
+  </script>
+</body>
+</html>

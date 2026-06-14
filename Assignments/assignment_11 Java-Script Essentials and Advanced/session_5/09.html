@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Build a reusable function called createPlaylistButton(songName, themeColor) that returns a button element styled with the given color and displaying the song name. Use this function to create and display three buttons for your favorite Spotify tracks. -->
+
+    <script>
+        function createPlaylistButton(songName, themeColor){
+            let btn = document.createElement("button");
+            btn.innerText = songName;
+            btn.style.backgroundColor = themeColor;
+            document.body.appendChild(btn);
+        }
+
+        createPlaylistButton("rait zara si..","green");
+        createPlaylistButton("terimitti..","blue");
+        createPlaylistButton("hawaye","yellow");
+
+    </script>
+</body>
+</html>

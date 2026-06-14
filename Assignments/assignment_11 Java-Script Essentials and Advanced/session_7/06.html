@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* stack items vertically */
+            gap: 20px;
+            padding: 30px;
+            max-width: 400px;
+            margin: 40px auto;
+            /* center on page */
+            background: linear-gradient(135deg, #5f9ea0, #4682b4);
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #title {
+            background-color: #8b0000;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            color: #f0e68c;
+            border-radius: 8px;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+        }
+
+        #result {
+            background-color: #26b610;
+            color: #f5f56c;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        #product-name {
+            padding: 12px;
+            border-radius: 20px;
+            font-size: 1em;
+            text-align: center;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        #product-name:focus {
+            border-color: #4682b4;
+            box-shadow: 0 0 6px rgba(70, 130, 180, 0.5);
+        }
+
+        #add-to-cart-btn {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #add-to-cart-btn:hover {
+            background-color: #333;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Write a function addToCart that adds a product name to a visible cart section when 
+     a 'Add to Cart' button is clicked, but attach the click event using addEventListener 
+     instead of the onclick attribute.<br><br><em><strong>Hint:</strong> Use document.
+        querySelector and addEventListener to connect the button and function.</em>
+ -->
+
+    <div class="container">
+        <input type="text" name="" id="product-name">
+        <button id="add-to-cart-btn">add to cart</button>
+    </div>
+    <div>
+        <div id="title">My Products</div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        let addToCartBtn = document.querySelector("#add-to-cart-btn");
+        addToCartBtn.addEventListener('click', addProduct);
+        function addProduct() {
+            let product = document.querySelector("#result");
+            let productName = document.querySelector("#product-name").value;
+            product.innerHTML += `<li>${productName}</li>`;
+        }
+
+    </script>
+</body>
+
+</html>

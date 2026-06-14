@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q10</title></head>
+<body>
+<!-- Q10: Clear Favorites button removes restaurants from localStorage -->
+<button id="clear">Clear Favorites</button>
+<ul id="list"></ul>
+<script>
+  const key="favRestaurants";
+  document.getElementById("clear").addEventListener("click",()=>{
+    localStorage.removeItem(key);
+    document.getElementById("list").innerHTML="";
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q12</title></head>
+<body>
+<!-- Q12: Save wishlist in localStorage and display -->
+<ul id="wishlist"></ul>
+<script>
+  const wishlist=[
+    {name:"Shoes",price:3000},
+    {name:"Watch",price:5000},
+    {name:"Bag",price:2000}
+  ];
+  localStorage.setItem("wishlist",JSON.stringify(wishlist));
+  const saved=JSON.parse(localStorage.getItem("wishlist"));
+  saved.forEach(item=>{
+    const li=document.createElement("li");
+    li.textContent=`${item.name} - ₹${item.price}`;
+    document.getElementById("wishlist").appendChild(li);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+Briefly explain (in 2-3 sentences) what event flow is in the DOM, and give one example of how event bubbling could affect a shopping cart app like Flipkart.
+
+Event flow in the DOM describes how events travel through the document tree in two phases: 
+capturing (from the root down to the target) and bubbling (from the target back up to the root).
+
+For example, in a Flipkart‑style shopping cart app, if a user clicks the “Remove” button inside 
+a product card, the click event might bubble up to the parent cart container. If the parent also 
+has a click handler, it could mistakenly trigger extra logic (like clearing the entire cart) 
+unless event bubbling is stopped with event.stopPropagation().

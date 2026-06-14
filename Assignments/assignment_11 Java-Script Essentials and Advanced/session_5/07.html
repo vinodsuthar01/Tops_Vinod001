@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            padding: 20px;
+            color: aqua;
+            background-color: black;
+            text-align: center;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Build a mini Zomato-style feature: write a function showMenuItem(name, price) that returns a styled HTML div with the food item's name and price, then call it for three different items and display them on the page.<br><br><em><strong>Hint:</strong> Use template literals and document.body.appendChild or innerHTML to add the divs.</em>
+ -->
+    
+    <script>
+        function showMenuItem(name, price){
+            let div = document.createElement("div");
+            div.classList.add("box");
+            div.innerHTML = `<strong>Name:</strong> ${name} Or <strong>Price:</strong> ${price}.`
+            document.body.appendChild(div)
+        }
+
+        showMenuItem("Mobile",2000);
+        showMenuItem("leptop",5500);
+        showMenuItem("pen",10);
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            padding: 15px;
+            background-color: azure;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .btn{
+            
+            padding: 10px;
+            text-align: center;
+            background-color: antiquewhite;
+            color: yellowgreen;
+            border: none;
+            border-radius: 15px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create an HTML page with a button labeled 'Add Song' — when the button is clicked, use onclick to instantly add a new card below showing a random song title from your favorite playlist.
+ -->
+    <button class="btn" onclick="addSong()">Add Song</button>
+    <script>
+        const playlist = [
+  "Kesariya",
+  "Tum Hi Ho",
+  "Tera Fitoor",
+  "Jeene Laga Hoon",
+  "Saiyaara"
+];
+
+        function addSong(){
+
+            let songTitle = playlist[Math.floor(Math.random() * playlist.length )];
+            let card = document.createElement("div");
+            card.innerText = songTitle;
+            card.classList.add("card");
+            document.body.appendChild(card);
+            
+        }
+    </script>
+</body>
+
+</html>

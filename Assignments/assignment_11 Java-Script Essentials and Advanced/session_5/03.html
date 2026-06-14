@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write a function expression named getDiscountedPrice that takes a price and a discount percent, and returns the final price after applying the discount (e.g., for Flipkart-style sale banners). -->
+    <script>
+        function getDiscountedPrice(price,discount_percent){
+            let finalPrice = +price - (+price * (+discount_percent/100));
+            return finalPrice
+        }
+
+        console.log(getDiscountedPrice(1000,20));
+        
+    </script>
+</body>
+</html>

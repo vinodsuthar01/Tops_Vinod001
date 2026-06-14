@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q1</title></head>
+<body>
+<!-- Q1: Show 'Loading your feed...' after 2s, then 'Feed loaded!' after another 2s -->
+<div id="feed"></div>
+<script>
+  setTimeout(() => {
+    document.getElementById("feed").textContent = "Loading your feed...";
+    setTimeout(() => {
+      document.getElementById("feed").textContent = "Feed loaded!";
+    }, 2000);
+  }, 2000);
+</script>
+</body>
+</html>

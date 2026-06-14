@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q7</title></head>
+<body>
+<!-- Q7: Promise resolves with random followers -->
+<script>
+  function getFollowersCount() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        const count = Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000;
+        resolve(count);
+      }, 1000);
+    });
+  }
+  getFollowersCount().then(count => {
+    console.log(`You have ${count} new followers`);
+  });
+</script>
+</body>
+</html>

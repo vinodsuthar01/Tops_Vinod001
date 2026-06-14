@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            padding: 30px;
+            margin: 25vmin 50vmin;
+            display: flex;
+            background-color: cornsilk;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 1.5rem;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: cornflowerblue;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #song-title{
+            font-size: 1rem;
+            color: black;
+            text-rendering: optimizeSpeed;
+            
+        
+        }
+
+        #song-btn{
+            padding: 10px;
+            background-color: black;
+            color: aliceblue;
+            border: none;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Build a mini 'Now Playing' display like Spotify: show a song title in a <span id="song-title"></span> and a button 'Change Song'; when the button is clicked, update the innerHTML of the span to a new song name from a predefined array. -->
+    <div class="container">
+        <head >now playing</head>
+        <span id="song-title"></span>
+        <button id="song-btn" onclick="changeSong()">play</button>
+    </div>
+    <script>
+        const songTitle = [
+            "Kesariya",
+            "Tum Hi Ho",
+            "Tera Fitoor",
+            "Jeene Laga Hoon",
+            "Saiyaara"
+        ];
+
+        let idx = 0; 
+        
+        
+        
+        function changeSong(){
+            if(idx == songTitle.length){
+                idx = 0;
+            };
+            let songBtnText = ">>"
+            let songBtn = document.getElementById("song-btn").innerText = songBtnText;
+            let song = songTitle[idx]
+            let song_title = document.getElementById("song-title").innerHTML=song;
+            idx ++;
+            console.log(idx);
+            
+                
+            
+
+        }
+
+    </script>
+</body>
+
+</html>

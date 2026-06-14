@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q15</title></head>
+<body>
+<!-- Q15: Clear Wishlist button removes wishlist from localStorage -->
+<button id="clear">Clear Wishlist</button>
+<ul id="wishlist"></ul>
+<script>
+  const key="wishlist";
+  document.getElementById("clear").addEventListener("click",()=>{
+    localStorage.removeItem(key);
+    document.getElementById("wishlist").innerHTML="";
+  });
+</script>
+</body>
+</html>

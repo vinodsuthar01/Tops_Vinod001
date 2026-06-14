@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q12</title></head>
+<body>
+<!-- Q12: Refactor setTimeout callback to Promise -->
+<script>
+  function paymentSuccess() {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve("Payment successful!");
+      }, 1000);
+    });
+  }
+  paymentSuccess().then(msg => console.log(msg));
+</script>
+</body>
+</html>

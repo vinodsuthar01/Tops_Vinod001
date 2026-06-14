@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        form{
+            margin: 25%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            gap : 20px;
+            background-color: antiquewhite;
+            padding: 20px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Build a mini form with an input for 'Username' and use the onchange event to log the 
+     entered username to the console every time the input changes.
+ -->
+
+    <form onsubmit="return false;" action="">
+        <input onchange="showUser()" id="username" type="text">
+    </form>
+
+    <script>
+        function showUser(){
+            let user = document.getElementById("username").value;
+            console.log(user);
+        }
+        
+    </script>
+</body>
+</html>

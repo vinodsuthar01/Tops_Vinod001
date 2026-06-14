@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q6</title></head>
+<body>
+<!-- Q6: Function with default parameter -->
+<script>
+  function orderFood(item, quantity = 1) {
+    return `You ordered ${quantity} ${item}${quantity > 1 ? "s" : ""}.`;
+  }
+  console.log(orderFood("Pizza"));
+  console.log(orderFood("Burger", 2));
+</script>
+</body>
+</html>

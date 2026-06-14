@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q7</title></head>
+<body>
+<!-- Q7: Save top 3 restaurants to localStorage and load on reload -->
+<ul id="list"></ul>
+<script>
+  const key = "favRestaurants";
+  const restaurants = ["Res A", "Res B", "Res C"];
+  localStorage.setItem(key, JSON.stringify(restaurants));
+
+  const saved = localStorage.getItem(key);
+  if(saved){
+    JSON.parse(saved).forEach(r=>{
+      const li=document.createElement("li");
+      li.textContent=r;
+      document.getElementById("list").appendChild(li);
+    });
+  }
+</script>
+</body>
+</html>

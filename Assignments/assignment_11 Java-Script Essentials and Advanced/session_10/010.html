@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q15</title></head>
+<body>
+<!-- Q15: Arrow function with rest operator -->
+<script>
+  const getFollowersSummary = (...counts) => {
+    const total = counts.reduce((sum, c) => sum + c, 0);
+    return `Total followers: ${total}`;
+  };
+  console.log(getFollowersSummary(300, 400, 500));
+</script>
+</body>
+</html>

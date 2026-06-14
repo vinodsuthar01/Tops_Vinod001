@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Create a function declaration called createLikeButton(label, color) that returns a styled HTML button element with the given label and background color. Append the button to the document body.
+ -->
+    <script>
+        function createLikeButton(label, color){
+            let likeBtn = document.createElement("button");
+            likeBtn.style.backgroundColor = color;
+            likeBtn.innerText = label;
+
+            document.body.appendChild(likeBtn);
+        }
+
+        createLikeButton("like", "yellow");
+    </script>
+</body>
+</html>

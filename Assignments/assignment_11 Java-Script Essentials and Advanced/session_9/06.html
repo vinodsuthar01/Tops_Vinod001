@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q9</title></head>
+<body>
+<!-- Q9: Function reads recentSearches from localStorage -->
+<script>
+  function getRecentSearches(){
+    const saved=localStorage.getItem("recentSearches");
+    return saved?JSON.parse(saved):[];
+  }
+  console.log(getRecentSearches());
+</script>
+</body>
+</html>

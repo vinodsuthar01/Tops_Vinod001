@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write an arrow function called formatFollowers that takes a number and returns it formatted as '1.5K' for 1500 or '2M' for 2000000, similar to how Instagram displays follower counts.<br><br><em><strong>Hint:</strong> Use conditional logic to check the number's size and format accordingly.</em> -->
+
+    <script>
+        let formatFollowers = (number) => {
+            let k = 1000;
+            let m = 1000000;
+
+            if(number < k){
+                return number
+            }else if(number < m){
+                let n = `${(number/k).toFixed(1)}k`
+                return n
+            }else{
+                let n = `${(number/m).toFixed(1)}m`
+                return n
+            }
+
+            
+        }
+
+        console.log(formatFollowers(1000));
+        
+    </script>
+</body>
+</html>

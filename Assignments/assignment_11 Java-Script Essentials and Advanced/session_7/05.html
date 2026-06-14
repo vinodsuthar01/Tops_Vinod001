@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            
+            display: flex;
+            
+            padding: 25px;
+            background-color: aquamarine;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button{
+            
+            padding: 1em;
+            border: none;
+            background-color: antiquewhite;
+            color: black;
+            border-radius: 1em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a 'Like' button similar to Instagram's and use addEventListener to increment and display the like count each time the button is clicked.<br><br><em><strong>Hint:</strong>
+         Use a variable to track the count and update the button text on each click.</em> -->
+
+    <button id="like-btn">like</button>
+
+    <script>
+        let likeCount = 0;
+        let btn = document.querySelector("#like-btn");
+        
+        btn.addEventListener('click',updateLike);
+        function updateLike(){
+            
+            likeCount ++;
+            btn.innerHTML =`like ${likeCount}`
+            
+        }
+    </script>
+</body>
+</html>

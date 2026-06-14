@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            margin: 25%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            gap : 20px;
+            background-color: antiquewhite;
+            padding: 20px;
+            border-radius: 20px;
+            
+        }
+
+        form input{
+            padding: 10px;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        form select{
+            padding: 10px;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        form div{
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Build a simple Zomato-style food order form with a dropdown for cuisine and an input for
+     quantity — use the onchange event on the dropdown to display a message showing which cuisine
+      was selected.
+ 
+     -->
+
+     <form onsubmit="return false;">
+        <select onchange="choosenDish()" id="cuisine">
+            <option value="indian">Indian</option>
+            <option value="chinese">Chinese</option>
+            <option value="italian">Italian</option>
+        </select>
+        <input placeholder="Enter Qty" type="text" id="qty" default="0">
+        <div id="selected-dish"></div>
+     </form>
+
+     
+
+     <script>
+        function choosenDish(){
+            let dish = document.querySelector("#cuisine").value;
+            let qty = document.querySelector("#qty").value;
+            let selectedDish = document.querySelector("#selected-dish").innerHTML=`You selected ${qty} ${dish} dish `;
+            
+
+            
+        }
+     </script>
+</body>
+</html>

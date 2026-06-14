@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q13</title></head>
+<body>
+<!-- Q13: Correct way to store array in localStorage -->
+<script>
+  let movies=["Jawan","Pathaan","Dunki"];
+  localStorage.setItem("movies",JSON.stringify(movies));
+  let saved=localStorage.getItem("movies");
+  let arr=JSON.parse(saved);
+  console.log(arr);
+</script>
+</body>
+</html>

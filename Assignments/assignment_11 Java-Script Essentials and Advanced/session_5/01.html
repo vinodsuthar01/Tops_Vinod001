@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- 1.
+Create a function declaration called createSpotifyButton(label, color) that returns an HTML button element with the given label and background color, and display it on the page. -->
+
+<script>
+    function createSpotifyButton(label,color){
+        let btn = document.createElement("button");
+        btn.style.color = "white";
+        btn.style.backgroundColor = color;
+        btn.innerText = label
+        document.body.append(btn);
+    }
+
+    createSpotifyButton("mybtn","black")
+</script>
+</body>
+</html>

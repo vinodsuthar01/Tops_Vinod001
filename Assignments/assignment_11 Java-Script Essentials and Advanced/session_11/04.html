@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q6</title></head>
+<body>
+<!-- Q6: Simulate fetching song lyrics -->
+<script>
+  function fetchSongLyrics(song, callback) {
+    setTimeout(() => {
+      callback(`Lyrics for ${song}: La la la...`);
+    }, 1500);
+  }
+  fetchSongLyrics("Tera Fitoor", lyrics => console.log(lyrics));
+</script>
+</body>
+</html>

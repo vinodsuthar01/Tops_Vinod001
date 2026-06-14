@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q4</title></head>
+<body>
+<!-- Q4: Function with default parameters -->
+<script>
+  function getDeliveryDetails(address = "Ahmedabad", paymentMethod = "UPI") {
+    console.log(`Delivery to ${address} with payment method: ${paymentMethod}`);
+  }
+  getDeliveryDetails(); // default
+  getDeliveryDetails("Surat", "Cash"); // custom
+</script>
+</body>
+</html>

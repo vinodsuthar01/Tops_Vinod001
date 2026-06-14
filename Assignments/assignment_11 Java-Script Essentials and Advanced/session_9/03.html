@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Q4</title></head>
+<body>
+<!-- Q4: Function parses JSON string of channels and returns names -->
+<script>
+  function parseChannels(jsonStr) {
+    const arr = JSON.parse(jsonStr);
+    return arr.map(ch => ch.name);
+  }
+  const data = '[{"name":"TechBurner"},{"name":"CodeWithHarry"}]';
+  console.log(parseChannels(data));
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- Create an array called favApps with 5 objects, each having title and url. Use splice() to remove the third app and insert a new app object for your most-used app at that position. Log the final array.<br><br><em><strong>Hint:</strong> splice(index, deleteCount, newItem) lets you remove and add in one step.</em>
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const favApps = [
+            { title: "YouTube", url: "https://youtube.com" },
+            { title: "Instagram", url: "https://instagram.com" },
+            { title: "Twitter", url: "https://twitter.com" },
+            { title: "Spotify", url: "https://spotify.com" },
+            { title: "Flipkart", url: "https://flipkart.com" }
+        ];
+
+        favApps.splice(2, 1, { title: "WhatsApp", url: "https://whatsapp.com" });
+        console.log(favApps);
+    </script>
+</body>
+
+</html>

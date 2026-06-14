@@ -1,0 +1,64 @@
+<!-- Display a list of 3 movies (hardcoded) and add a 'Remove' button next to each. 
+ Use addEventListener to remove the movie card from the DOM when its button is clicked. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie List</title>
+  <style>
+    .movie-card {
+      background: #f0f0f0;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .remove-btn {
+      background: crimson;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .remove-btn:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+  <h2>My Movies</h2>
+  <div id="movie-list">
+    <div class="movie-card">
+      <span>Inception</span>
+      <button class="remove-btn">Remove</button>
+    </div>
+    <div class="movie-card">
+      <span>Interstellar</span>
+      <button class="remove-btn">Remove</button>
+    </div>
+    <div class="movie-card">
+      <span>The Dark Knight</span>
+      <button class="remove-btn">Remove</button>
+    </div>
+  </div>
+
+  <script>
+    // Select all remove buttons
+    let removeButtons = document.querySelectorAll(".remove-btn");
+
+    // Attach event listeners
+    removeButtons.forEach(button => {
+      button.addEventListener("click", function() {
+        // Remove the parent movie card
+        this.parentElement.remove();
+      });
+    });
+  </script>
+</body>
+</html>
