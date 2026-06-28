@@ -21,10 +21,12 @@
             let songName = document.querySelector("#input-value").value;
             
             let li = document.createElement("li");
+            li.innerText=songName;
             
             let playlist = document.querySelector("#playlist");
              
             playlist.appendChild(li);
+            document.querySelector("#input-value").value=""
         }
 
     </script>

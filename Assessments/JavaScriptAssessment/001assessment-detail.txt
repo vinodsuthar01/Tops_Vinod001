@@ -1,0 +1,62 @@
+TOPS Technologies - Assessment File 
+JavaScript Essentials And Advanced 
+Total Time: 3 Hours 
+Theme: Social Bio Link Builder (Creator Profile) 
+Section A: Concept Application 
+1. 
+You are building a creator bio-link page where profile details and links are 
+rendered dynamically after page load. Explain how JavaScript execution, 
+variable scoping (let/const), and DOM selection work together to populate the 
+UI correctly. 
+2. A “Verified Creator” badge should appear only if the follower count crosses a 
+threshold and should update automatically when data changes. Explain how 
+conditional logic, truthy/falsy values, and DOM manipulation enable this 
+behavior. 
+3. Users can add multiple social links dynamically. Explain how arrays of objects, 
+loops, and template literals are used together to render and maintain this list 
+efficiently. 
+4. When the page reloads, previously added links must still appear. Explain how 
+LocalStorage and JSON conversion help persist and restore application state, 
+and what issues arise if this sync is missed. 
+5. Clicking the delete icon on any link should remove it immediately without 
+refreshing the page. Explain how event handling and event delegation support 
+this interaction. 
+6. As the app grows, logic becomes harder to manage in one file. Explain how 
+modular JavaScript (imports/exports) improves maintainability and 
+scalability. 
+Section B: Mini Tasks - Social Bio Link Builder 
+Task: Creator Profile Link Manager 
+TOPS Technologies
+JAVASCRIPT [JavaScript Essentials And Advanced - A1] 
+TOPS Technologies - Assessment File 
+1. 
+Link Object & Input: Create a form to capture a Title and URL. On submit, store 
+these as an object {title, url} inside an array. 
+2. URL Validation: Use a Regex or URL check to ensure the link is valid (must 
+include https://). Show a red error message if the format is wrong. 
+3. Dynamic Rendering: Render each saved link as a clickable button in a "Profile 
+Preview" area. Links must open in a new tab. 
+4. LocalStorage Persistence: Save the entire array to localStorage whenever a 
+link is added or removed. Ensure the list re-loads automatically on page 
+refresh. 
+5. Delete Action: Add a "Remove" button to each link. Clicking it must instantly 
+update the UI and delete that specific entry from storage. 
+Section C: Mini Capstone Project 
+Mini Project: Creator "Bio-Stack" Builder 
+Objective: Build a responsive, single-page "Link-in-Bio" application that allows 
+creators to manage their social presence, validate their links, and customize their 
+profile theme. 
+Your application must include: 
+1. 
+Dynamic Link Management: A functional dashboard to Add (Title + URL) and 
+Delete social media links from a list. 
+2. Data Persistence: Implement localStorage (or an equivalent) so that the 
+user's links and theme settings remain saved after a page refresh. 
+3. URL Validation Logic: A validation script that ensures inputs are properly 
+formatted URLs and prevents the submission of empty fields. 
+4. Theme Engine: A Light/Dark mode toggle that updates the UI colors instantly 
+and persists the user's preference. 
+5. Mobile-First Design: A layout that is fully responsive, prioritizing a clean, 
+centered "link-tree" aesthetic on mobile screen widths. 
+TOPS Technologies
+JAVASCRIPT [JavaScript Essentials And Advanced - A1] 

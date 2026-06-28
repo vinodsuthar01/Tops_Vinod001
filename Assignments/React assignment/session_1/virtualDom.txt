@@ -1,0 +1,7 @@
+virtual dom is a light weight copy of real dom it create a virtual copy of real dom
+that not seen it compare virtual copy to real dom and change only required component
+
+why it is useful:
+    helping in faster development
+    easy to manage error end debug
+    it reduce time when the page rendering

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Links</title>
+
+<style id="light">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+
+.link-list{
+    display:grid;
+    gap:15px;
+    max-width:800px;
+    margin:auto;
+}
+
+.link-card{
+    background:#fff;
+    padding:18px;
+    border-radius:12px;
+    display:grid;
+    grid-template-columns: 1fr auto auto;
+    gap:15px;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.link-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.link-info{
+    overflow:hidden;
+}
+
+.link-title{
+    font-size:18px;
+    font-weight:600;
+    color:#222;
+    margin-bottom:5px;
+}
+
+.link-url{
+    color:#666;
+    font-size:14px;
+    word-break:break-all;
+}
+
+.btn{
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+.add-btn .btn,
+.link-edit .btn{
+    background:#2563eb;
+    color:white;
+}
+
+.add-btn{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.link-edit .btn:hover{
+    background:#1d4ed8;
+}
+
+.link-preview .btn{
+    background-color: greenyellow;
+    color: white;
+}
+
+.link-delete .btn{
+    background:#ef4444;
+    color:white;
+}
+
+.link-delete .btn:hover{
+    background:#dc2626;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+@media(max-width:600px){
+    .link-card{
+        grid-template-columns:1fr;
+    }
+    
+    .link-edit,
+    .link-delete{
+        width:100%;
+    }
+
+    .btn{
+        width:100%;
+    }
+}
+</style>
+<style id="dark">
+    .dark{
+    background:#121212;
+    color:#e0e0e0;
+}
+
+.dark h1{
+    color:#ffffff;
+}
+
+.dark .link-card{
+    background:#1e1e1e;
+    border:1px solid #333;
+}
+
+.dark .link-card:hover{
+    background:#252525;
+    border-color:#555;
+}
+
+.dark .link-title{
+    color:#ffffff;
+}
+
+.dark .link-url{
+    color:#8ab4f8;
+}
+
+.dark .link-edit{
+    background:#2d3748;
+    color:#63b3ed;
+}
+
+.dark .link-edit:hover{
+    background:#3b4b63;
+}
+
+.dark .link-delete{
+    background:#3b1f1f;
+    color:#fc8181;
+}
+
+.dark .link-delete:hover{
+    background:#512626;
+}
+</style>
+</head>
+<body>
+
+<h1>My Links</h1>
+
+<div class="link-list"></div>
+<div class="add-btn">
+    <button class="btn" onclick="window.location.href='link-form.html'">Add New Link</button>
+    <button id="theme-btn" class="btn" onclick="changeTheme()">Dark</button>
+</div>
+
+
+<script>
+    
+
+    function checkTheme(){
+        if(localStorage.getItem("theme")){
+            let currtheme = localStorage.getItem("theme");
+            return currtheme;
+        }else{
+            localStorage.setItem("theme",JSON.stringify("light"));
+            let currtheme = localStorage.getItem("theme");
+            return currtheme;
+        }
+    }
+
+    function currentTheme(){
+        let theme = checkTheme();
+        let btn = document.getElementById("theme-btn");
+        
+        if(theme=="light"){
+            document.body.classList.remove("dark");
+            btn.innerText="Dark";
+        }
+
+        if(theme == "dark"){
+            document.body.classList.add("dark");
+            btn.innerText="Light";
+            
+        }
+    }
+
+
+
+
+    function getLinkData(){
+        const links = JSON.parse(localStorage.getItem("all-links"))
+        printLinkData(links);
+    }
+
+    function printLinkData(linkData){
+        let str = "";
+        linkData.forEach((index,i)=>{
+            str+=`<div class="link-card">
+
+                    <div class="link-info" onclick="previewLink('${index.url}')">
+                        <div class="link-title">${index.title}</div>
+                        <div class="link-url">${index.url}</div>
+                    </div>
+
+
+                    <div class="link-edit">
+                        <button class="btn" onclick="window.location.href='link-edit-form.html?eid=${i}'">Edit</button>
+                    </div>
+
+                    <div class="link-delete">
+                        <button class="btn" onclick="deleteLink(${i})">Delete</button>
+                    </div>
+
+                </div>`
+        });
+        document.querySelector(".link-list").innerHTML=str;
+    }
+
+    function previewLink(url){
+        window.open(url,"_blank")
+    }
+
+
+    function deleteLink(id){
+        const links = JSON.parse(localStorage.getItem("all-links"));
+        links.splice(id,1);
+        localStorage.setItem("all-links",JSON.stringify(links));
+        getLinkData();
+        
+    }
+
+    function changeTheme(){
+        let btn = document.getElementById('theme-btn');
+        let theme = checkTheme()
+        
+        if(theme == 'light'){
+            document.body.classList.add("dark");
+            btn.innerText = 'Light';            
+            localStorage.setItem("theme","dark");
+        }else{
+            document.body.classList.remove("dark");
+            btn.innerText = "Dark";
+            localStorage.setItem("theme","light");
+        }
+    }
+
+    window.onload=getLinkData();
+    window.onload=currentTheme();
+
+</script>
+
+</body>
+</html>

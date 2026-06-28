@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link</title>
+    <style>
+        h2{
+            color:rgb(0, 36, 237);
+            font-style: italic;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        form{
+            display: flex;
+            padding: 22px;
+            flex-direction: column;
+            align-items: center;
+            gap: 22px;
+            
+        }
+
+        form input{
+            padding: 15px;
+            width: 70%;
+            text-align: center;
+        }
+
+        button{
+            background-color: blue;
+            font-weight: bolder;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 18px;
+            
+
+        }
+        .btn{
+            text-align: center;
+        }
+
+        #danger-msg{
+            color: #dc2626;
+            text-align: center;
+            
+        }
+
+        /* dark mode css */
+        .dark{
+    background:#121212;
+    color:#ffffff;
+}
+
+        .dark h2{
+    color:#60a5fa;
+}
+
+.dark form{
+    background:#1e1e1e;
+}
+
+.dark form input{
+    background:#2d2d2d;
+    color:#ffffff;
+    border:1px solid #444;
+}
+
+.dark form input::placeholder{
+    color:#9ca3af;
+}
+
+.dark button{
+    background:#2563eb;
+    color:#ffffff;
+}
+
+.dark button:hover{
+    background:#1d4ed8;
+}
+
+.dark #danger-msg{
+    color:#f87171;
+}
+    </style>
+</head>
+<body>
+    <div class="form-head">
+        <h2>Edit Link</h2>
+    </div>
+    <form action="" onsubmit="return editUrl()">
+        <div id="danger-msg"></div>
+        <input type="text" name="title" id="title" placeholder="Enter Title">
+        <input type="text" name="url" id="url" placeholder="Enter Url">
+        <button type="submit">Edit Link</button>
+        
+    </form>
+    <div class="btn">    <button onclick="window.location.href='link-list.html'">Go To Links</button>
+</div>
+    <div class="btn"><button id="theme-btn" onclick="changeTheme()" value="light">Dark</button></div>
+
+    
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const eid = params.get('eid');
+        // console.log(eid);
+
+        const links = JSON.parse(localStorage.getItem('all-links'));
+        const selectedlink = links[eid];
+
+        document.getElementById("title").value=selectedlink.title;
+        document.getElementById("url").value=selectedlink.url;
+
+        
+         
+
+        function editUrl(){
+            let title = document.getElementById("title").value;
+            let url = document.getElementById("url").value;
+            let errMsg = document.getElementById("danger-msg");
+
+
+            if(title==""||url==""){
+                // alert("Title or URL missing");
+                errMsg.innerText="Title or URL missing";
+
+                return false;
+            }
+
+            if(url.startsWith("http://")||url.startsWith("https://")&&url.endsWith(".com")){
+                const link = {
+                    "title":title.toUpperCase(),
+                    "url":url,
+                };
+
+                if(link){
+                    links.splice(eid,1,link)
+                    localStorage.setItem("all-links",JSON.stringify(links))
+                    // alert("link edited successfully");
+                    window.location.href="link-list.html";
+                    return false;
+                }
+            }else{
+                // alert("wrong url");
+                errMsg.innerText="Wrong URL";
+
+                return false;
+            }
+            
+
+        }
+
+        function changeTheme(){
+            let btn = document.getElementById('theme-btn');
+            
+            if(btn.value == 'light'){
+                document.body.classList.add("dark");
+                btn.innerText = 'Light';
+                btn.value = "dark";
+            }else{
+                document.body.classList.remove("dark");
+                btn.innerText = "Dark"
+                btn.value = "light";
+            }
+        }
+    </script>
+</body>
+</html>

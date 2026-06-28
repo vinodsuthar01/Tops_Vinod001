@@ -12,9 +12,12 @@
 
         function showProfile(name, followers, isPremium) {
             console.log(typeof (followers));
+            followers= Number(followers);
+            console.log(typeof(followers));
+            
         }
 
-        showProfile("Vinod", 233, true);
+        showProfile("Vinod", "233", true);
     </script>
 </body>
 </html>
