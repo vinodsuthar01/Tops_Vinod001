@@ -1,0 +1,50 @@
+.product-card{
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+  display:  flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: dimgrey;
+  color: gold;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.profile-card{
+  height: 250px;
+  width: 600px;
+  padding: 50px;
+  display: flex;
+  justify-content:space-evenly;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  gap: 10px;
+}
+
+.profile-item{
+  width: 50%;
+  padding: 50px;
+  font-size: 1.3em;
+  
+ 
+}
+
+.profile-item img{
+  padding: 10px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid white;
+  
+}
+
+.title{
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
