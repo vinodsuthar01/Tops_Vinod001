@@ -1,0 +1,100 @@
+Section A: Concept Application
+1. You are building a creator bio-link page where profile details and links are rendered dynamically after page load. Explain how JavaScript execution, variable scoping (let/const), and DOM selection work together to populate the UI correctly.
+
+Answer:
+
+When the page loads, JavaScript executes from top to bottom. It fetches or prepares the profile data, then selects HTML elements using DOM methods like document.getElementById() or document.querySelector(). After selecting the elements, JavaScript updates their content dynamically.
+
+const is used for variables whose reference does not change, such as selected DOM elements or configuration objects. let is used for values that can change, such as user data or counters. Proper scoping prevents variables from leaking outside their intended block, making the code safer and easier to maintain.
+
+2. A "Verified Creator" badge should appear only if the follower count crosses a threshold and should update automatically when data changes. Explain how conditional logic, truthy/falsy values, and DOM manipulation enable this behavior.
+
+Answer:
+
+Conditional statements such as if, else, or the ternary operator check whether the follower count exceeds a specified threshold (for example, 10,000 followers). If the condition is true, JavaScript displays the "Verified Creator" badge; otherwise, it hides it.
+
+Truthy and falsy values help simplify conditions. For example, if (isVerified) works because true is truthy and false is falsy. After evaluating the condition, DOM manipulation methods such as textContent, innerHTML, or classList update the page instantly without reloading it.
+
+3. Users can add multiple social links dynamically. Explain how arrays of objects, loops, and template literals are used together to render and maintain this list efficiently.
+
+Answer:
+
+An array of objects is used to store each social media link. Each object contains properties such as the platform name and URL.
+
+Example:
+
+const links = [
+  {
+    platform: "GitHub",
+    url: "https://github.com/vinod"
+  },
+  {
+    platform: "LinkedIn",
+    url: "https://linkedin.com/in/vinod"
+  }
+];
+
+A loop such as forEach() iterates through the array and creates HTML for each item. Template literals make it easy to insert object values into HTML strings.
+
+Example:
+
+links.forEach(link => {
+    container.innerHTML += `
+        <a href="${link.url}">
+            ${link.platform}
+        </a>
+    `;
+});
+
+This approach makes it easy to add, remove, or update links by modifying only the array.
+
+4. When the page reloads, previously added links must still appear. Explain how LocalStorage and JSON conversion help persist and restore application state, and what issues arise if this sync is missed.
+
+Answer:
+
+LocalStorage stores data permanently in the browser even after the page is refreshed or closed. Since LocalStorage can store only strings, JavaScript converts objects into strings using JSON.stringify() before saving them.
+
+Example:
+
+localStorage.setItem("links", JSON.stringify(links));
+
+When the application starts, the stored string is converted back into a JavaScript object using JSON.parse().
+
+Example:
+
+const links = JSON.parse(localStorage.getItem("links")) || [];
+
+If this synchronization is not performed, users lose all their saved links after refreshing the page, resulting in poor user experience and possible data loss.
+
+5. Clicking the delete icon on any link should remove it immediately without refreshing the page. Explain how event handling and event delegation support this interaction.
+
+Answer:
+
+Event handling allows JavaScript to respond to user actions such as clicking a delete button. When the delete button is clicked, the corresponding item is removed from the array, LocalStorage is updated, and the UI is rendered again.
+
+Event delegation improves performance by attaching one event listener to the parent container instead of adding listeners to every delete button. JavaScript checks which child element triggered the event using event.target.
+
+Example:
+
+container.addEventListener("click", (event) => {
+    if (event.target.classList.contains("delete")) {
+        // Remove the selected link
+    }
+});
+
+This approach is efficient because newly added links automatically inherit the delete functionality.
+
+6. As the app grows, logic becomes harder to manage in one file. Explain how modular JavaScript (imports/exports) improves maintainability and scalability.
+
+Answer:
+
+Modular JavaScript divides the application into separate files, each responsible for a specific feature. Functions, variables, or classes are exported from one module and imported into another.
+
+Example:
+
+// storage.js
+export function saveLinks() {}
+// app.js
+import { saveLinks } from "./storage.js";
+
+This approach improves code readability, makes debugging easier, avoids duplicate code, and allows multiple developers to work on different modules independently. It also makes the application easier to scale and maintain as new features are added.
